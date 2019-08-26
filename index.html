@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <script src="https://unpkg.com/@tensorflow/tfjs@1.0.1"></script>
+  <script src="https://unpkg.com/@tensorflow-models/mobilenet@1.0.0"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <strong>AI Demo</strong>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main role="main">
+    <section class="jumbotron">
+      <div class="container">
+        <h1 class="jumbotron-heading">Image Classifier</h1>
+        <div>
+          <p>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="uploadImage" onchange="loadImage(this)">
+              <label class="custom-file-label" for="uploadImage">Choose...</label>
+            </div>
+          </p>
+          <p><img id="uploadedImage" width="500px" /></p>
+          <p><button id="predictButton" type="button" class="btn btn-primary" onclick="predictClick()">Predict</button>
+          </p>
+          <p id="result"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
